@@ -1,4 +1,5 @@
 void main() {
+  //Utilizar o comando super para chamar uma funcao dentro de outra funcao  utilizacao e assim colocar super.nomedafuncao;
   Cachorro cachorro1 = Cachorro('REX', 4);
   //cachorro1.nome = 'Rex';
   // cachorro1.idade = 3;
@@ -6,7 +7,7 @@ void main() {
   cachorro1.comer();
   cachorro1.dormir();
   cachorro1.latir();
-  print('-----------------------------------');
+  print('--------------------------------------------------------');
   Gato gato1 = Gato('Bia', 4);
   //gato1.nome = 'Bia';
   //gato1.idade = 5;
@@ -17,36 +18,34 @@ void main() {
   print(gato1);
 }
 
-class Animal
-{
-  String? nome;
-  int? idade;
+class Animal {
+  String nome;
+  int idade;
 
-  Animal(this.nome,this.idade);
+  Animal(this.nome, this.idade);
 
   @override
-  String toString()
-  {
+  String toString() {
     return ('Nome:$nome Idade:$idade');
   }
 
-  void comer()
-  {
+  void comer() {
     print('Comer!');
   }
 
-  void dormir()
-  {
-    print('Dormiu!');
+  @override
+  void dormir() {
+    print('Dormiu Roncando muito!');
   }
 }
 //dormir
 //comer
 //Print do objeto
 
-class Cachorro extends Animal 
-{
-  Cachorro(String nome, int idade) : super(nome, idade);
+class Cachorro extends Animal {
+  Cachorro(String nome, int idade)
+      : super(nome,
+            idade); //Aqui não precisa de colocar super.  e so colocar a funcao funcao();
 
   @override
   String toString() {
@@ -63,8 +62,7 @@ class Cachorro extends Animal
   }
 }
 
-class Gato extends Animal
-{
+class Gato extends Animal {
   Gato(String nome, int idade) : super(nome, idade);
 
   @override
@@ -74,5 +72,11 @@ class Gato extends Animal
 
   void miar() {
     print('Miauuu!');
+    super.dormir();
+  }
+
+  @override
+  void dormir() {
+    print('Gato dormindo');
   }
 }

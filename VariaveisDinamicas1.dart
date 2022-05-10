@@ -1,5 +1,4 @@
 void main() {
-  
   var nome = 'Diego';
 
   nome = 'Silva';
@@ -9,9 +8,7 @@ void main() {
   idade++;
 
   dynamic variavel = 'Diego';
-   
-  variavel=3;
-  variavel=true;
-  
-  
- }
+
+  variavel = 3;
+  variavel = true;
+}

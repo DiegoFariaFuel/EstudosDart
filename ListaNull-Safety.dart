@@ -1,7 +1,3 @@
-import 'dart:svg';
-
-import 'Lista.dart';
-
 void main() {
   List<String?> lista1 = ['Diego', null, 'Flavio', null];
 
